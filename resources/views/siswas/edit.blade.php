@@ -10,8 +10,9 @@ $pretitle= 'Edit Data Siswa';
 
   <div class="card-body">
 
-<form action="{{ route('siswas.store') }}" class="" method="post">
+<form action="{{ route('siswas.update', $siswa->id) }}" class="" method="post">
   @csrf
+  @method('PUT')
 
   <div class="mb-3">
     <label class="form-label">Nama</label>

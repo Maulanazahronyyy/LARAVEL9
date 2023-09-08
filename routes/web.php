@@ -35,6 +35,8 @@ Route::get('/siswas', [SiswaController::class, 'index'])->name('siswas.index');
  
 Route::get('/siswas/{id}/edit', [SiswaController::class, 'edit'])->name('siswas.edit');
 
+Route::put('/siswas/{id}', [SiswaController::class, 'update'])->name('siswas.update');
+
 Route::delete('/siswas/{id}', [SiswaController::class, 'destroy'])->name('siswas.destroy');
 
 Route::get('/dashboard', function () {

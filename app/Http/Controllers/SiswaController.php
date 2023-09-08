@@ -47,6 +47,23 @@ class SiswaController extends Controller
        ]);
     }
 
+    public function update(Request $request, $id)
+    {
+        $siswa = Siswa::find($id);
+
+        $siswa->nama = $request->nama;
+
+        $siswa->kelas = $request->kelas;
+
+        $siswa->alamat = $request->alamat;
+
+        $siswa->nis = $request->nis;
+
+        $siswa->save();
+
+        return redirect()->route('siswas.index'); 
+    }
+
     public function destroy($id)
     {
         $siswa = Siswa::find($id);
